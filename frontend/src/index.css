@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-primary: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    background-color: #0f1419;
+    color: #dee3ea;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.material-symbols-outlined.fill,
+.icon-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Jali geometric sacred pattern */
+.jali-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2.5L22.5 11l2.5 2.5V16h15v2H25v2.5l-2.5 2.5-2.5-2.5zm-15-5L2.5 13 5 10.5 7.5 13 5 15.5zm15-15L22.5 3 25 5.5 22.5 8 20 5.5zm15 15L37.5 13 40 10.5 37.5 8 35 10.5zM5 24.5L7.5 27 5 29.5 2.5 27 5 24.5zm15 15l2.5-2.5 2.5 2.5-2.5 2.5-2.5-2.5zm15-15l2.5-2.5 2.5 2.5-2.5 2.5-2.5-2.5z' fill='%23FFFFFF' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Tactical grid overlay */
+.bg-tactical-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* SOS Emergency Pulse Animation */
+@keyframes sos-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.75);
+    transform: scale(0.99);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(244, 67, 54, 0);
+    transform: scale(1.01);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0);
+    transform: scale(0.99);
+  }
+}
+
+.sos-btn-pulse {
+  animation: sos-pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(70, 223, 166, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(70, 223, 166, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(70, 223, 166, 0);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s infinite;
+}
+
+/* Custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1419;
+}
+::-webkit-scrollbar-thumb {
+  background: #372623;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5c403c;
+}

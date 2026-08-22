@@ -1,0 +1,7 @@
+{
+  "name": "KumbhRakshak",
+  "description": "Civic-Divine Emergency, Safety & Pilgrim Navigation Dashboard for Nashik Kumbh Mela with Live Tactical Map, Emergency SOS, Nearby Water Stations, Drone Rescue Safety Services, E-Shuttle Transit, Free Maha Prasad Food Services, Medical Vault, Temple Timings, and AI Safety Guide.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
